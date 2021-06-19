@@ -172,13 +172,18 @@ let Student = function (name, age, hometown) {
 
 let joe = new Student('Joe', 'Schmoe', 100);
 
+let Student2 = (name, age, hometown) => ({
+  return `${name}, ${age},${hometown}`
+})
+
+
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
 console.log(joe);
+console.log(Student2('Joe', 'Schmoe', 100));
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
-let newStudent = (name, age, hometown) => ({name:`${name}` , age:`${age}`,hometown:`${hometown}`})
-console.log(newStudent('Joe', 'Schmoe', 100));
+
 
 
 Student.prototype.greeting = function () {
@@ -191,19 +196,14 @@ console.log(joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
-let newGreeting = (name) => `Hi, my name is ${name}`;
-console.log(newGreeting('Joe'));
 
 
 Student.courseName = function () {
   return 'This student is enrolled in Code 301.';
 };
 
-let newCourseName = () => 'This student is enrolled in Code 301.';
-
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(Student.courseName());
-console.log(newCourseName());
 
 
 
@@ -214,17 +214,17 @@ Student.prototype.scope = function () {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-console.log(joe.scope());
+// console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-console.log(joe.scopeArrow());
+// console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//it's related to the data inside the student constructer
+//
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//it's the global scope the whole website window
+//
 // 3. Explain why "this" is different when an arrow function is used.
-// Because the arrow function doesn't define its own execution context.No matter how or where being executed, this value inside of an arrow function always equals this value from the outer scope.
+//
