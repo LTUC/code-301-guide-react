@@ -223,8 +223,8 @@ console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//it's related to the data inside the student constructer
+//
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//it's the global scope the whole website window
+//
 // 3. Explain why "this" is different when an arrow function is used.
-// Because the arrow function doesn't define its own execution context.No matter how or where being executed, this value inside of an arrow function always equals this value from the outer scope.
+//
